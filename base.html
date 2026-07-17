@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base Chain Launchpad 分析 · MemeRush · 2026-07-17</title>
+<title>Base Memecoin Wars · MemeRush · 2026-07-17</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0f14; color: #e2e8f0; }
@@ -78,8 +78,8 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
 <body>
 
 <div class="header">
-  <h1>Base Chain Launchpad 分析 · MemeRush</h1>
-  <div class="sub">参照 RH Chain 同口径报告 · 方法论：dex.trades JOIN base.creation_traces</div>
+  <h1>Base Memecoin Wars · MemeRush</h1>
+  <div class="sub">数据来源：<a href="https://dune.com/kucoinventures/basememe" style="color:#63b3ed;text-decoration:none;">Dune @kucoinventures/basememe ↗</a> · 同口径自建查询验证 · dex.trades JOIN base.creation_traces</div>
   <div class="meta">
     <span>📅 2026-07-17</span>
     <span>📊 7d 窗口：Jul 10–17</span>
@@ -98,8 +98,8 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
       <div class="stat-row"><span class="stat-label">头部 Launchpad 7d vol</span><span class="stat-val big">$1.19B</span></div>
       <div class="stat-row"><span class="stat-label">链上线时间</span><span class="stat-val">2023-08</span></div>
       <div class="stat-row"><span class="stat-label">头部协议</span><span class="stat-val">Clanker（独大）</span></div>
-      <div class="stat-row"><span class="stat-label">30d 新 token 数（前三）</span><span class="stat-val">35K / 45K / 27K</span></div>
-      <div class="stat-row"><span class="stat-label">Clanker 头部 token 7d vol</span><span class="stat-val">OpenAI $112M</span></div>
+      <div class="stat-row"><span class="stat-label">30d 新 token (Zora/Clanker/Flaunch)</span><span class="stat-val">45K / 35K / 4K</span></div>
+      <div class="stat-row"><span class="stat-label">Clanker 头部 token 7d vol</span><span class="stat-val">OpenAI $112M ⚠️</span></div>
     </div>
     <div class="chain-card rh">
       <h3 class="rh-h">🟠 Robinhood Chain</h3>
@@ -126,7 +126,7 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
   </div>
 
   <!-- Main table -->
-  <div class="section-label">Base Chain Launchpad 优先级（按 7d 交易量）</div>
+  <div class="section-label">Base Memecoin Wars · 5 大协议（按 7d 交易量）</div>
   <div class="table-wrap">
     <table>
       <thead>
@@ -134,10 +134,10 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
           <th>#</th>
           <th>协议</th>
           <th>7d 交易量<br><span style="font-weight:400;color:#4a5568">买方向</span></th>
-          <th>头部 Token</th>
-          <th>头部 MC</th>
+          <th>活跃 Token</th>
           <th>30d 新 Token</th>
-          <th>特征</th>
+          <th>头部 Token</th>
+          <th>特征 / 备注</th>
         </tr>
       </thead>
       <tbody>
@@ -167,140 +167,103 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
           </td>
         </tr>
 
-        <!-- 2. ERC20Factory -->
+        <!-- 2. Virtuals Protocol -->
         <tr>
           <td><span class="rank r2">2</span></td>
           <td>
-            <div class="proto-name">ERC20Factory</div>
-            <div class="proto-sub">0xf10122d4...3b · ERC20Factory · 部署于 CREATE2</div>
+            <div class="proto-name">Virtuals Protocol ✅已接入</div>
+            <div class="proto-sub">v1: 0x71b8efc8...3 · v2: 0xb0c3a928...f · v3: 0xc169a240...2</div>
           </td>
           <td>
-            <div class="vol" style="color:#fbd38d;">$11.7M</div>
+            <div class="vol" style="color:#fbd38d;">$11.68M</div>
+            <div class="vol-note">v2 $8.78M + v1 $2.90M（三版本合计）</div>
+          </td>
+          <td style="color:#63b3ed;font-size:13px;font-weight:700;">253</td>
+          <td style="color:#a0aec0;font-size:13px;font-weight:700;">506</td>
+          <td>
+            <div style="font-weight:700;color:#e2e8f0;">TIBBIR</div>
+            <div style="font-size:11px;color:#718096;">Ribbita by Virtuals</div>
           </td>
           <td>
-            <div style="font-weight:700;color:#e2e8f0;">SOSO</div>
-            <div style="font-size:11px;color:#718096;">SoSoValue · 7d vol $7.4M</div>
-          </td>
-          <td><div class="mc-mid">$4.3M<br><span style="font-size:10px;">DexScreener fdv</span></div></td>
-          <td>14,312</td>
-          <td>
-            <span class="tag tag-generic">通用 ERC20</span>
-            <div class="note-cell" style="margin-top:5px;">通用 ERC20 发射工厂，头部 token SoSoValue 是指数/数据类项目。</div>
+            <span class="tag tag-ai">AI Agents</span>
+            <div class="note-cell" style="margin-top:5px;">多版本 factory 并存，v2 最活跃。RH chain 已接入。</div>
           </td>
         </tr>
 
-        <!-- 3. Factory(launch) -->
+        <!-- 3. ZoraFactory -->
         <tr>
           <td><span class="rank r3">3</span></td>
           <td>
-            <div class="proto-name">Factory <span style="color:#718096;font-size:12px">"launch"</span></div>
-            <div class="proto-sub">0x05e40bcb...b · Factory · 2025-08 上线</div>
+            <div class="proto-name">Zora Coins</div>
+            <div class="proto-sub">0x77777751...3 · ZoraFactory<br>Token 特征：地址尾缀 <strong style="color:#f6ad55">7777</strong>（与 RH chain FLAP 同风格）</div>
           </td>
           <td>
-            <div class="vol" style="color:#63b3ed;">$4.7M</div>
+            <div class="vol" style="color:#63b3ed;">$2.61M</div>
+            <div class="vol-note">token 数量大但激活率低</div>
           </td>
-          <td>
-            <div style="font-weight:700;color:#e2e8f0;">doji</div>
-            <div style="font-size:11px;color:#718096;">7d vol $3.4M</div>
-          </td>
-          <td><div class="mc-na">—</div></td>
-          <td>9,738</td>
-          <td>
-            <span class="tag tag-generic">未知品牌</span>
-            <div class="note-cell" style="margin-top:5px;">源码含 "launch" 关键字，协议品牌待确认。</div>
-          </td>
-        </tr>
-
-        <!-- 4. TokenFactory -->
-        <tr>
-          <td><span class="rank r4">4</span></td>
-          <td>
-            <div class="proto-name">TokenFactory</div>
-            <div class="proto-sub">0xf0b5141d...9 · TokenFactory · 2025-12 上线</div>
-          </td>
-          <td>
-            <div class="vol" style="color:#76e4f7;">$4.2M</div>
-          </td>
-          <td>
-            <div style="font-weight:700;color:#e2e8f0;">GITLAWB</div>
-            <div style="font-size:11px;color:#718096;">7d vol $904K · 567 active tokens</div>
-          </td>
-          <td><div class="mc-na">—</div></td>
-          <td>8,131</td>
-          <td>
-            <span class="tag tag-generic">未知品牌</span>
-          </td>
-        </tr>
-
-        <!-- 5. Virtuals AgentFactory -->
-        <tr>
-          <td><span class="rank r5">5</span></td>
-          <td>
-            <div class="proto-name">Virtuals Protocol</div>
-            <div class="proto-sub">0x71b8efc8...3 · AgentFactory (主) · 2024-11<br>+ 0xb0c3a928 · v2 · 2026-05<br>+ 0xc169a240 · v3</div>
-          </td>
-          <td>
-            <div class="vol" style="color:#9ae6b4;">$5.3M</div>
-            <div class="vol-note">三个 factory 合计：$2.9M + $1.2M + $1.0M + 尾部</div>
-          </td>
-          <td>
-            <div style="font-weight:700;color:#e2e8f0;">TIBBIR</div>
-            <div style="font-size:11px;color:#718096;">Ribbita by Virtuals · 7d vol $2.2M</div>
-          </td>
-          <td><div class="mc-na">—</div></td>
-          <td>~38,000<br><span style="color:#718096;font-size:11px">(三 factory 合计)</span></td>
-          <td>
-            <span class="tag tag-ai">AI Agents</span>
-            <div class="note-cell" style="margin-top:5px;">多版本 factory 并存。Base 主场，RH chain 已接入。</div>
-          </td>
-        </tr>
-
-        <!-- 6. ZoraFactory -->
-        <tr>
-          <td><span class="rank r6">6</span></td>
-          <td>
-            <div class="proto-name">Zora</div>
-            <div class="proto-sub">0x77777751...3 · ZoraFactory → ZoraFactoryImpl<br>Token 特征：地址尾缀 <strong style="color:#f6ad55">7777</strong>（同 RH chain FLAP）</div>
-          </td>
-          <td>
-            <div class="vol" style="color:#718096;">$2.5M</div>
-            <div class="vol-note">9,802 active tokens；量远低于 token 数</div>
-          </td>
+          <td style="color:#63b3ed;font-size:13px;font-weight:700;">9,731</td>
+          <td style="color:#63b3ed;font-size:13px;font-weight:700;">45,614</td>
           <td>
             <div style="font-weight:700;color:#e2e8f0;">jesse</div>
             <div style="font-size:11px;color:#718096;">7d vol $1.6M</div>
           </td>
-          <td><div class="mc-na">—</div></td>
-          <td>45,632</td>
           <td>
-            <span class="tag tag-nft">NFT + Token 混合</span>
+            <span class="tag tag-nft">NFT + Coin 混合</span>
             <div class="note-cell" style="margin-top:5px;">
-              Token 数第一（45K），但交易量低（激活率低）。<br>
-              <strong>⚠️ 地址尾缀 7777 与 RH chain 的 FLAP 相同</strong> → 两者可能同源（ZoraFactory 风格）。
+              30d 发币量第一（45K），单 token 均量低。<br>
+              <strong>FLAP (RH chain) token 也以 7777 结尾</strong>，可能同源（Zora 风格部署）。
             </div>
           </td>
         </tr>
 
-        <!-- 7. Unknown high-vol single factory -->
+        <!-- 4. ToshiMart -->
         <tr>
-          <td><span class="rank r6">—</span></td>
+          <td><span class="rank r4">4</span></td>
           <td>
-            <div class="proto-name" style="color:#718096;">Unknown (single-token)</div>
-            <div class="proto-sub">0xdd56781d...2 · 7 active tokens · $29.4M vol</div>
+            <div class="proto-name">ToshiMart</div>
+            <div class="proto-sub">0x1ea172fb...8 · TransparentProxy → Portal<br>
+            <a href="https://toshimart.xyz" style="color:#63b3ed;text-decoration:none">toshimart.xyz ↗</a> · "The premier memecoin launchpad on Base"</div>
           </td>
           <td>
-            <div class="vol" style="color:#718096;">$29.4M</div>
-            <div class="vol-note">⚠️ 非 launchpad，只有 7 tokens（SOL/Solana 贡献 $27.9M）</div>
+            <div class="vol" style="color:#76e4f7;">$2.16M</div>
+          </td>
+          <td style="color:#76e4f7;font-size:13px;font-weight:700;">41</td>
+          <td style="color:#76e4f7;font-size:13px;font-weight:700;">107</td>
+          <td>
+            <div style="font-weight:700;color:#e2e8f0;">—</div>
           </td>
           <td>
-            <div style="font-weight:700;color:#718096;">SOL</div>
-            <div style="font-size:11px;color:#4a5568;">Solana 同名 meme · 不代表 launchpad 活动</div>
+            <span class="tag tag-meme">Bonding Curve</span>
+            <div class="note-cell" style="margin-top:5px;">
+              明确定位为 Base 链头部 meme launchpad，bonding curve → 毕业至 Uniswap。<br>
+              发币量偏少（107/30d）但 41 active tokens 说明真实交易活跃。
+            </div>
           </td>
-          <td><div class="mc-na">—</div></td>
-          <td>—</td>
+        </tr>
+
+        <!-- 5. Flaunch -->
+        <tr>
+          <td><span class="rank r5">5</span></td>
           <td>
-            <span class="tag tag-warn">排除</span>
-            <div class="note-cell" style="margin-top:5px;">单 token 工厂，量来自 SOL meme token，不计入 launchpad 排名。</div>
+            <div class="proto-name">Flaunch</div>
+            <div class="proto-sub">v1: 0xb4512bf...c · v2: 0x516af52d...9<br>
+            <a href="https://flaunch.gg" style="color:#63b3ed;text-decoration:none">flaunch.gg ↗</a> · "Launch. Trade. Earn."</div>
+          </td>
+          <td>
+            <div class="vol" style="color:#718096;">$0.07M</div>
+            <div class="vol-note">v2 $50K + v1 $20K</div>
+          </td>
+          <td style="color:#718096;font-size:13px;font-weight:700;">135</td>
+          <td style="color:#718096;font-size:13px;font-weight:700;">4,020</td>
+          <td>
+            <div style="font-weight:700;color:#718096;">—</div>
+          </td>
+          <td>
+            <span class="tag tag-generic">Creator Earn</span>
+            <div class="note-cell" style="margin-top:5px;">
+              "Programmable economies on Base"，创作者收益驱动。<br>
+              发币量不少（4K/30d）但 7d vol 极低（$70K），交易活跃度差。暂不优先。
+            </div>
           </td>
         </tr>
 
@@ -310,26 +273,24 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
 
   <!-- Key observation: 7777 suffix -->
   <div class="insight-box" style="margin-bottom:28px;">
-    <strong>📌 重要发现：Zora (Base) 和 FLAP (RH chain) 可能同源</strong><br>
-    两者工厂合约地址均以 <code style="background:#1e2233;padding:1px 5px;border-radius:3px;color:#f6ad55;">7777</code> 结尾：
-    Zora = <code style="font-size:11px;color:#a0aec0;">0x777777751622c0d3258f214f9df38e35bf45baf3</code>，
-    FLAP (RH) = <code style="font-size:11px;color:#a0aec0;">0x26605f322f7ff986f381bb9a6e3f5dab0beaeb09</code>（非 7777 结尾，但 token 地址均为 7777）。
-    更可能的解释：FLAP 是参考 Zora 机制在 RH chain 上部署，采用了相同的 CREATE2 vanity 地址策略。
-    如果 FLAP = Zora on RH chain，则接入优先级更高（有成熟母协议背书）。
+    <strong>📌 Zora (Base) 与 FLAP (RH chain) 7777 同源线索</strong><br>
+    Zora Coins factory = <code style="background:#1e2233;padding:1px 5px;border-radius:3px;color:#a0aec0;">0x777777751622c0d3258f214f9df38e35bf45baf3</code>（地址含 7777）<br>
+    FLAP (RH chain) factory token 地址均以 <code style="background:#1e2233;padding:1px 5px;border-radius:3px;color:#f6ad55;">7777</code> 结尾。<br>
+    两者都采用 CREATE2 vanity address 策略，机制高度相似。如果 FLAP 是 Zora 在 RH chain 上的部署，有成熟母协议背书，接入优先级可升为 P0。
   </div>
 
   <!-- Factory address cheatsheet -->
-  <div class="section-label">Base Chain 工厂地址速查</div>
+  <div class="section-label">工厂地址速查</div>
   <div style="background:#131520;border:1px solid #2d3748;border-radius:8px;padding:16px 20px;font-size:12px;font-family:'SF Mono',monospace;line-height:2.2;margin-bottom:32px;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;">
-      <div><span style="color:#f6ad55;">Clanker</span>              <span style="color:#e2e8f0;">0xe85a59c628f7d27878aceb4bf3b35733630083a9</span></div>
-      <div><span style="color:#fbd38d;">ERC20Factory</span>         <span style="color:#e2e8f0;">0xf10122d428b4bc8a9d050d06a2037259b4c4b83b</span></div>
-      <div><span style="color:#63b3ed;">Factory (launch)</span>     <span style="color:#e2e8f0;">0x05e40bcba6e5e2f23c4bd87544c42ba3363c1aeb</span></div>
-      <div><span style="color:#76e4f7;">TokenFactory</span>         <span style="color:#e2e8f0;">0xf0b5141dd9096254b2ca624dff26024f46087229</span></div>
-      <div><span style="color:#9ae6b4;">Virtuals AgentFactory</span> <span style="color:#e2e8f0;">0x71b8efc8bcad65a5d9386d07f2dff57ab4eaf533</span></div>
-      <div><span style="color:#9ae6b4;">Virtuals v2</span>          <span style="color:#e2e8f0;">0xb0c3a928955755795fc7c9bf6d37b7d0990af49f</span></div>
-      <div><span style="color:#9ae6b4;">Virtuals v3</span>          <span style="color:#e2e8f0;">0xc169a24010fd4d2568a1fe8ba8d2ca8f5ce6d6d2</span></div>
-      <div><span style="color:#718096;">ZoraFactory (7777)</span>   <span style="color:#4a5568;">0x777777751622c0d3258f214f9df38e35bf45baf3</span></div>
+      <div><span style="color:#f6ad55;">Clanker</span>               <span style="color:#e2e8f0;">0xe85a59c628f7d27878aceb4bf3b35733630083a9</span></div>
+      <div><span style="color:#fbd38d;">Virtuals v1 (Agent)</span>  <span style="color:#e2e8f0;">0x71b8efc8bcad65a5d9386d07f2dff57ab4eaf533</span></div>
+      <div><span style="color:#fbd38d;">Virtuals v2</span>           <span style="color:#e2e8f0;">0xb0c3a928955755795fc7c9bf6d37b7d0990af49f</span></div>
+      <div><span style="color:#fbd38d;">Virtuals v3</span>           <span style="color:#e2e8f0;">0xc169a24010fd4d2568a1fe8ba8d2ca8f5ce6d6d2</span></div>
+      <div><span style="color:#63b3ed;">ZoraFactory (7777)</span>   <span style="color:#e2e8f0;">0x777777751622c0d3258f214f9df38e35bf45baf3</span></div>
+      <div><span style="color:#76e4f7;">ToshiMart</span>            <span style="color:#e2e8f0;">0x1ea172fb88c24dfc21ff6fa38762511c123ba948</span></div>
+      <div><span style="color:#718096;">Flaunch v1</span>           <span style="color:#4a5568;">0xb4512bf57d50fbcb64a3adf8b17a79b2a204c18c</span></div>
+      <div><span style="color:#718096;">Flaunch v2</span>           <span style="color:#4a5568;">0x516af52d0c629b5e378da4dc64ecb0744ce10109</span></div>
     </div>
   </div>
 
