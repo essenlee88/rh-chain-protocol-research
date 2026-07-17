@@ -95,7 +95,8 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
   <div class="compare-bar" style="margin-bottom:28px;">
     <div class="chain-card base">
       <h3 class="base-h">🔵 Base Chain</h3>
-      <div class="stat-row"><span class="stat-label">头部 Launchpad 7d vol</span><span class="stat-val big">$1.19B</span></div>
+      <div class="stat-row"><span class="stat-label">Clanker 散户量（真实）</span><span class="stat-val big">$38M</span></div>
+      <div class="stat-row"><span class="stat-label">Clanker 总量（含bot）</span><span class="stat-val" style="color:#fc8181;font-size:13px;">$1.23B⚠️</span></div>
       <div class="stat-row"><span class="stat-label">链上线时间</span><span class="stat-val">2023-08</span></div>
       <div class="stat-row"><span class="stat-label">头部协议</span><span class="stat-val">Clanker（独大）</span></div>
       <div class="stat-row"><span class="stat-label">30d 新 token (Zora/Clanker/Flaunch)</span><span class="stat-val">45K / 35K / 4K</span></div>
@@ -126,17 +127,25 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
   </div>
 
   <!-- Main table -->
-  <div class="section-label">Base Memecoin Wars · 5 大协议（按 7d 交易量）</div>
+  <!-- Methodology note -->
+  <div class="warn-box" style="margin-bottom:20px;">
+    <strong>⚠️ 口径说明：总量 vs 散户量</strong><br>
+    链上 <code>dex.trades.amount_usd</code> 包含 <strong>bot / 套利 / wash trade</strong>，与 GMGN / MemeRush 看到的真实用户量差距可达 10-30x。
+    本表同时展示 <strong>「总量」</strong>（全部链上交易）和 <strong>「散户量」</strong>（单笔 &lt;$10K，更接近真实用户）。<br>
+    Clanker 总量 $1.2B 中 <strong>96.9% 来自 bot</strong>（仅 4 个钱包产生了 $1.1B）；真实散户量 $38M，与 GMGN 展示量级吻合。
+  </div>
+
+  <div class="section-label">Base Memecoin Wars · 5 大协议（总量 + 散户量双口径）</div>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th>#</th>
           <th>协议</th>
-          <th>7d 交易量<br><span style="font-weight:400;color:#4a5568">买方向</span></th>
-          <th>活跃 Token</th>
+          <th>7d 散户量<br><span style="font-weight:400;color:#4a5568">&lt;$10K/笔</span></th>
+          <th>7d 总量<br><span style="font-weight:400;color:#4a5568">含 bot</span></th>
+          <th>散户<br>钱包数</th>
           <th>30d 新 Token</th>
-          <th>头部 Token</th>
           <th>特征 / 备注</th>
         </tr>
       </thead>
@@ -151,25 +160,19 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
             <div class="proto-sub" style="margin-top:3px;">RH chain 同款协议（量差 5,900x）</div>
           </td>
           <td>
-            <div class="vol" style="color:#f6ad55;">$1,211M</div>
-            <div style="margin-top:6px;background:#131520;border-radius:6px;padding:7px 10px;font-size:11px;line-height:1.8;">
-              <div style="color:#a0aec0;">双向总量：<strong style="color:#e2e8f0;">$2,422M</strong>（484K trades）</div>
-              <div style="color:#fc8181;">⚠️ 含 "OpenAI" 洗盘：<strong>$442M</strong>（1 天 62 地址对倒）</div>
-              <div style="color:#68d391;">剔除后净量：<strong>~$1,980M 双向</strong></div>
-            </div>
+            <div class="vol" style="color:#f6ad55;">$38M</div>
+            <div style="font-size:11px;color:#718096;margin-top:2px;">1,901 散户钱包</div>
           </td>
-          <td style="color:#f6ad55;font-size:13px;font-weight:700;">2,060</td>
-          <td style="color:#f6ad55;font-size:13px;font-weight:700;">34,990</td>
           <td>
-            <div style="font-weight:700;color:#fc8181;">OpenAI ⚠️</div>
-            <div style="font-size:11px;color:#fc8181;">洗盘：$221M · 1天 · 仅 62 unique traders</div>
-            <div style="font-weight:700;color:#e2e8f0;margin-top:4px;">CZ（真实头部）</div>
-            <div style="font-size:11px;color:#718096;">7d vol $89M · 正常交易</div>
+            <div style="font-weight:700;color:#fc8181;font-size:13px;">$1,231M ⚠️</div>
+            <div style="font-size:11px;color:#fc8181;">96.9% = bot（4 个钱包产生 $1.1B）</div>
           </td>
+          <td style="color:#f6ad55;font-size:13px;font-weight:700;">1,901</td>
+          <td style="color:#f6ad55;font-size:13px;font-weight:700;">34,990</td>
           <td>
             <span class="tag tag-ai">AI / 链上文化</span>
             <span class="tag tag-meme">多链</span>
-            <div class="note-cell" style="margin-top:5px;"><strong>Base 链绝对王者</strong>，净量仍 ~$1B+ 买方向。无代码部署 + creator fee。头部 token 需过滤洗盘。</div>
+            <div class="note-cell" style="margin-top:5px;"><strong>散户量 $38M，1,901 钱包</strong>。总量虚高 33x。bot 主导；散户量和 GMGN 展示量级吻合。</div>
           </td>
         </tr>
 
@@ -181,10 +184,11 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
             <div class="proto-sub">v1: 0x71b8efc8...3 · v2: 0xb0c3a928...f · v3: 0xc169a240...2</div>
           </td>
           <td>
-            <div class="vol" style="color:#fbd38d;">$11.68M</div>
-            <div class="vol-note">v2 $8.78M + v1 $2.90M（三版本合计）</div>
+            <div class="vol" style="color:#fbd38d;">$12.1M</div>
+            <div style="font-size:11px;color:#68d391;">≈100% 散户（8,305 钱包）</div>
           </td>
-          <td style="color:#63b3ed;font-size:13px;font-weight:700;">253</td>
+          <td style="color:#fbd38d;font-size:13px;font-weight:700;">$12.2M</td>
+          <td style="color:#fbd38d;font-size:13px;font-weight:700;">8,305</td>
           <td style="color:#a0aec0;font-size:13px;font-weight:700;">506</td>
           <td>
             <div style="font-weight:700;color:#e2e8f0;">TIBBIR</div>
@@ -204,10 +208,11 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
             <div class="proto-sub">0x77777751...3 · ZoraFactory<br>Token 特征：地址尾缀 <strong style="color:#f6ad55">7777</strong>（与 RH chain FLAP 同风格）</div>
           </td>
           <td>
-            <div class="vol" style="color:#63b3ed;">$2.61M</div>
-            <div class="vol-note">token 数量大但激活率低</div>
+            <div class="vol" style="color:#63b3ed;">$2.75M</div>
+            <div style="font-size:11px;color:#68d391;">96.7% 散户（9,996 钱包）</div>
           </td>
-          <td style="color:#63b3ed;font-size:13px;font-weight:700;">9,731</td>
+          <td style="color:#63b3ed;font-size:13px;font-weight:700;">$2.84M</td>
+          <td style="color:#63b3ed;font-size:13px;font-weight:700;">9,996</td>
           <td style="color:#63b3ed;font-size:13px;font-weight:700;">45,614</td>
           <td>
             <div style="font-weight:700;color:#e2e8f0;">jesse</div>
@@ -231,9 +236,11 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
             <a href="https://toshimart.xyz" style="color:#63b3ed;text-decoration:none">toshimart.xyz ↗</a> · "The premier memecoin launchpad on Base"</div>
           </td>
           <td>
-            <div class="vol" style="color:#76e4f7;">$2.16M</div>
+            <div class="vol" style="color:#76e4f7;">$2.24M</div>
+            <div style="font-size:11px;color:#68d391;">100% 散户（2,241 钱包）</div>
           </td>
-          <td style="color:#76e4f7;font-size:13px;font-weight:700;">41</td>
+          <td style="color:#76e4f7;font-size:13px;font-weight:700;">$2.24M</td>
+          <td style="color:#76e4f7;font-size:13px;font-weight:700;">2,241</td>
           <td style="color:#76e4f7;font-size:13px;font-weight:700;">107</td>
           <td>
             <div style="font-weight:700;color:#e2e8f0;">—</div>
@@ -257,9 +264,10 @@ tbody td { padding: 12px 14px; vertical-align: middle; }
           </td>
           <td>
             <div class="vol" style="color:#718096;">$0.07M</div>
-            <div class="vol-note">v2 $50K + v1 $20K</div>
+            <div style="font-size:11px;color:#68d391;">100% 散户（90 钱包）</div>
           </td>
-          <td style="color:#718096;font-size:13px;font-weight:700;">135</td>
+          <td style="color:#718096;font-size:13px;font-weight:700;">$0.07M</td>
+          <td style="color:#718096;font-size:13px;font-weight:700;">90</td>
           <td style="color:#718096;font-size:13px;font-weight:700;">4,020</td>
           <td>
             <div style="font-weight:700;color:#718096;">—</div>
